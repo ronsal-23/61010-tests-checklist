@@ -4,14 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IEC 61010-1 Checklist Pro</title>
+    <title>Checklist Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <div class="container">
-        <h2>IEC 61010-1 Checklist Pro</h2>
+        <div class="title-row">
+            <h2 id="pageTitle">Checklist Pro</h2>
+            <div class="standard-picker">
+                <label for="standardSelect">Standard:</label>
+                <select id="standardSelect" onchange="handleStandardChange()">
+                    <option value="IEC 61010-1" selected>IEC 61010-1</option>
+                    <option value="IEC 62368-1">IEC 62368-1</option>
+                </select>
+            </div>
+        </div>
 
         <div class="main-content">
             <div class="left-sidebar">
@@ -43,34 +51,33 @@
 
             <div class="right-content">
                 <div class="pagination-controls">
-            <label for="itemsPerPage">Show items per page:</label>
-            <select id="itemsPerPage" onchange="handleItemsPerPageChange()">
-                <option value="10">10</option>
-                <option value="20" selected>20</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-            </select>
-            <span id="recordCount"></span>
-        </div>
+                    <label for="itemsPerPage">Show items per page:</label>
+                    <select id="itemsPerPage" onchange="handleItemsPerPageChange()">
+                        <option value="10">10</option>
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <span id="recordCount"></span>
+                </div>
 
-        <table id="checklistTable">
-            <thead>
-                <tr>
-                    <th class="col-clause">Clause</th>
-                    <th class="col-name">Test name</th>
-                    <th class="col-verdict">Verdict</th>
-                    <th class="col-comments">Comments</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-            </tbody>
-        </table>
+                <table id="checklistTable">
+                    <thead>
+                        <tr>
+                            <th class="col-clause">Clause</th>
+                            <th class="col-name">Test name</th>
+                            <th class="col-verdict">Verdict</th>
+                            <th class="col-comments">Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
 
-        <div class="pagination-nav">
-            <button id="prevBtn" onclick="previousPage()" class="btn-page">← Previous</button>
-            <span id="pageInfo" class="page-info"></span>
-            <button id="nextBtn" onclick="nextPage()" class="btn-page">Next →</button>
-        </div>
+                <div class="pagination-nav">
+                    <button id="prevBtn" onclick="previousPage()" class="btn-page">← Previous</button>
+                    <span id="pageInfo" class="page-info"></span>
+                    <button id="nextBtn" onclick="nextPage()" class="btn-page">Next →</button>
+                </div>
             </div>
         </div>
     </div>
