@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist Pro</title>
+    <title>Checklist</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="title-row">
-            <h2 id="pageTitle">Checklist Pro</h2>
             <div class="standard-picker">
-                <label for="standardSelect">Standard:</label>
                 <select id="standardSelect" onchange="handleStandardChange()">
                     <option value="IEC 61010-1" selected>IEC 61010-1</option>
                     <option value="IEC 62368-1">IEC 62368-1</option>
                 </select>
+                <h2 id="pageTitle">Checklist</h2>
             </div>
         </div>
 
@@ -30,7 +29,7 @@
                     </div>
                     <div class="form-group">
                         <label for="equipment">Equipment under test:</label>
-                        <input type="text" id="equipment" placeholder="Enter equipment description">
+                        <input type="text" id="equipment" placeholder="Enter equipment model">
                     </div>
                     <div class="form-group">
                         <label for="poNumber">SII PO number:</label>

@@ -192,7 +192,7 @@ function handleStandardChange() {
     initializeStandardResults(currentStandard);
     renderTable();
 }
-function updateTitle() { document.getElementById('pageTitle').textContent = `${currentStandard} Checklist Pro`; }
+function updateTitle() { document.getElementById('pageTitle').textContent = 'Checklist'; }
 function initializeStandardResults(standard) {
     if (!testResultsByStandard[standard]) testResultsByStandard[standard] = {};
     const store = testResultsByStandard[standard];
